@@ -1,0 +1,14 @@
+let lista = document.getElementByTagName("ul");
+console.log(lista);
+let rand = Math.floor(Math.random()*lista.length);
+
+const handleClick = (element) => {
+	for (let i=0; i<=lista.length; i++) {
+		if (i === rand) {
+			lista[i].style.textDecoration = "underline";
+		}
+	}
+}
+
+let button = document.getElementById("kto-pije");
+button.onClick = handleClick();
